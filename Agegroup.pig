@@ -1,7 +1,6 @@
 urlmap = load 'urltest.tsv';
 
 urldata = foreach urlmap generate (chararray) $0 as url,(chararray) $1 as category;
-
 urlmovie = FILTER urldata by category == 'movies';
 
 rawlogs = load 'logtest.tsv';
